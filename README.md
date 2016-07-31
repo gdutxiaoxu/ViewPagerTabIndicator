@@ -1,0 +1,2 @@
+# ViewPagerTabIndicator
+这是使用HorizontalScrollView封装的 ViewPager的 页面导航器，有多种样式可以选择
