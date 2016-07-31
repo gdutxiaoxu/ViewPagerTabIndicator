@@ -38,3 +38,11 @@ captures/
 
 # Keystore files
 *.jks
+/library/
+/sample/
+/TabPagerIndicatorApp/
+/app/
+/touTiaoTabDemo/
+/tabpagerindictor/
+/build/
+/.idea/

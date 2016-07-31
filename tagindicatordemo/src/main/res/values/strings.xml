@@ -1,0 +1,24 @@
+<resources>
+
+    <string-array name="fragments_titles">
+        <item name="toBeConfirmed">待确认</item>
+        <item name="toBeAplied">待支付</item>
+        <item name="paied">已支付</item>
+        <item name="used">已使用</item>
+        <item name="userUnsubscribe">用户退订</item>
+        <item name="refund">退款中</item>
+        <item name="refunded">已退款</item>
+        <item name="parkingUnsubscribe">停车场退订</item>
+
+    </string-array>
+
+    <string name="app_name">TagIndicatorDemo</string>
+    <string name="toBeConfirmed">待确认</string>
+    <string name="toBeAplied">待支付</string>
+    <string name="paied">已支付</string>
+    <string name="used">已使用</string>
+    <string name="userUnsubscribe">用户退订</string>
+    <string name="refund">退款中</string>
+    <string name="refunded">已退款</string>
+    <string name="parkingUnsubscribe">停车场退订</string>
+</resources>

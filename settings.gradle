@@ -1,0 +1,4 @@
+include ':app', ':library', ':sample', ':tagindicatordemo', ':viewpagertabindicator', '' +
+        ':TabPagerIndicatorApp', ':tabpagerindictor', ':touTiaoTabDemo'
+
+
