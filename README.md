@@ -1,4 +1,4 @@
-# 使用HorizontalScrollView打造自己的页面导航器（ Navigator）
+# 仿网易新闻的顶部导航指示器
 
 ---
 
