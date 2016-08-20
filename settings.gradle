@@ -1,4 +1,4 @@
-include ':app', ':library', ':sample', ':tagindicatordemo', ':viewpagertabindicator', '' +
-        ':TabPagerIndicatorApp', ':tabpagerindictor', ':touTiaoTabDemo'
+include ':tagindicatordemo', ':viewpagertabindicator', ':app', ':library', ':ViewPagerTransformsSample'
+
 
 

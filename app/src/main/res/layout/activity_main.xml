@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/darker_gray">
+
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="切换样式"
+            android:textColor="@android:color/white"
+            android:lines="1"
+            android:ellipsize="end"/>
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/aliwx_at6"
+            android:paddingRight="15dp"/>
+
+
+    </RelativeLayout>
+
+
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/rl_header"
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="20dp">
+
+    </android.support.v4.view.ViewPager>
+
+    <com.xujun.administrator.customviewspecif.view.CirclePageIndicator
+        android:id="@+id/circle_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+
+    </com.xujun.administrator.customviewspecif.view.CirclePageIndicator>
+</RelativeLayout>
