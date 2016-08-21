@@ -7,7 +7,7 @@
 
 
 
-## <span id="#1.1">仿网易新闻的顶部导航指示器<span/>
+## <span id="1.1">仿网易新闻的顶部导航指示器<span/>
 
 
 ---
@@ -96,7 +96,7 @@ mPagerIndicator.setIndicatorMode(TabPagerIndicator.IndicatorMode.MODE_WEIGHT_EXP
 ---
 
 
-## <span id="#1.2">Android打造不一样的 新手引导页面<span/>
+## <span id="1.2">Android打造不一样的 新手引导页面<span/>
 
 ## 效果图如下
 
