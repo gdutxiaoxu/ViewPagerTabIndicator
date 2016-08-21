@@ -32,6 +32,7 @@ public class TableTransformer extends BaseTransformer {
     protected static final float getOffsetXForRotation(float degrees, int width, int height) {
         OFFSET_MATRIX.reset();
         OFFSET_CAMERA.save();
+
         OFFSET_CAMERA.rotateY(Math.abs(degrees));
         OFFSET_CAMERA.getMatrix(OFFSET_MATRIX);
         OFFSET_CAMERA.restore();

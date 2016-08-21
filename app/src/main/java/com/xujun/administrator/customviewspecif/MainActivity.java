@@ -71,8 +71,10 @@ public class MainActivity extends AppCompatActivity {
     public void setTextViewSpan(TextView view, int fontSize, int start, int end, int color) {
 
         SpannableString span = new SpannableString(view.getText());
-        span.setSpan(new AbsoluteSizeSpan(fontSize), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        span.setSpan(new ForegroundColorSpan(color), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        span.setSpan(new AbsoluteSizeSpan(fontSize), start, end, Spannable
+                .SPAN_EXCLUSIVE_EXCLUSIVE);
+        span.setSpan(new ForegroundColorSpan(color), start, end, Spannable
+                .SPAN_EXCLUSIVE_EXCLUSIVE);
         view.setText(span);
     }
 
@@ -116,12 +118,18 @@ public class MainActivity extends AppCompatActivity {
         mCirclePageIndicator.setViewPager(mViewPager);
 
         final float density = getResources().getDisplayMetrics().density;
-        //        mCirclePageIndicator.setBackgroundColor(0xFFCCCCCC);
+        //  mCirclePageIndicator.setBackgroundColor(0xFFCCCCCC);
+        // 设置滑动的时候移动的小圆点是否跳跃
         mCirclePageIndicator.setSnap(false);
+        //设置小圆点的半径
         mCirclePageIndicator.setRadius(10 * density);
+        // 设置页面小圆点的颜色
         mCirclePageIndicator.setPageColor(0x880000FF);
+        // 设置移动的小圆点的颜色
         mCirclePageIndicator.setFillColor(0xFF888888);
+        // 设置外边框的颜色
         mCirclePageIndicator.setStrokeColor(0xFF000000);
+        //设置外表框的宽度
         mCirclePageIndicator.setStrokeWidth(2 * density);
     }
 
