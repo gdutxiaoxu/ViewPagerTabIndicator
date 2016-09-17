@@ -219,5 +219,6 @@ mCirclePageIndicator.setStrokeColor(0xFF000000);
 mCirclePageIndicator.setStrokeWidth(2 * density);
 
 
+
 ```
 
