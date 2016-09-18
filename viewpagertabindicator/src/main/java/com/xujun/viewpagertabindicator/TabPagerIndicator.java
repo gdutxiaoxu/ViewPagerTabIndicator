@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
-package com.xujun.viewpagertabindicator;
+package com.xujun.funapp.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.databinding.tool.util.L;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
@@ -39,6 +40,9 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.orhanobut.logger.Logger;
+import com.xujun.funapp.R;
 
 import java.util.Locale;
 
@@ -66,13 +70,18 @@ public class TabPagerIndicator extends HorizontalScrollView {
 
     private int tabCount;
     private static final String TAG = "xujun";
+    /**
+     * 记录当前的tab的position
+     */
     private int currentPosition = 0;
+//    记录上一次position的位置
+    private int lastPosition = -1;
     private float currentPositionOffset = 0f;
 
     private Paint rectPaint;
     private Paint dividerPaint;
 
-    private int indicatorColor = 0xFF666666;
+    private int indicatorColor = 0xffff0000;
     private int underlineColor = 0x1A000000;
     private int dividerColor = 0x1A000000;
 
@@ -83,17 +92,19 @@ public class TabPagerIndicator extends HorizontalScrollView {
     private boolean textAllCaps = true;
 
     private int scrollOffset = 52;
-    private int indicatorHeight = 8;
+    private int indicatorHeight = 4;
     private int underlineHeight = 2;
     private int dividerPadding = 12;
     //表示自己之间的间隔
 
-    private int horizontalPadding =24;
+    private int horizontalPadding =2*dividerPadding;
     private int verticalPadding =10;
     private int dividerWidth = 1;
 
-    private int tabTextSize = 12;
+    private int tabTextSize = 14;
     private int tabTextColor = 0xFF666666;
+//    选中的字体的颜色默认与indicatorColor的颜色相同
+    private int tabSelectTextColor = indicatorColor;
     private Typeface tabTypeface = null;
     private int tabTypefaceStyle = Typeface.BOLD;
 
@@ -198,6 +209,7 @@ public class TabPagerIndicator extends HorizontalScrollView {
         tabTextSize = a.getDimensionPixelSize(0, tabTextSize);
         tabTextColor = a.getColor(1, tabTextColor);
 
+
         a.recycle();
 
         // get custom attrs
@@ -206,6 +218,7 @@ public class TabPagerIndicator extends HorizontalScrollView {
 
         indicatorColor = a.getColor(R.styleable.TabPagerIndicator_pstsIndicatorColor,
                 indicatorColor);
+        tabSelectTextColor=indicatorColor;
         underlineColor = a.getColor(R.styleable.TabPagerIndicator_pstsUnderlineColor,
                 underlineColor);
         dividerColor = a.getColor(R.styleable.TabPagerIndicator_pstsDividerColor, dividerColor);
@@ -396,6 +409,13 @@ public class TabPagerIndicator extends HorizontalScrollView {
 
         // default: line below current tab
         View currentTab = tabsContainer.getChildAt(currentPosition);
+        if(currentTab instanceof TextView){
+            ((TextView) currentTab).setTextColor(tabSelectTextColor);
+            if(lastPosition!=-1  && lastPosition!=currentPosition){
+                TextView lastTab =(TextView) tabsContainer.getChildAt(lastPosition);
+                lastTab.setTextColor(tabTextColor);
+            }
+        }
         float lineLeft = currentTab.getLeft();
         float lineRight = currentTab.getRight();
 
@@ -439,7 +459,7 @@ public class TabPagerIndicator extends HorizontalScrollView {
 
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+            lastPosition=currentPosition;
             currentPosition = position;
             currentPositionOffset = positionOffset;
 
@@ -473,6 +493,12 @@ public class TabPagerIndicator extends HorizontalScrollView {
             if (delegatePageListener != null) {
                 delegatePageListener.onPageSelected(position);
             }
+
+            lastPosition=currentPosition;
+            currentPosition = position;
+            Logger.i("lastPosition="+lastPosition);
+            Logger.i("currentPosition="+currentPosition);
+
         }
 
     }
