@@ -12,20 +12,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onButtonClick"
-        android:text="btn_test"/>
+        android:text="toolBarActivity"/>
 
     <Button
         android:id="@+id/btn_pagIndicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onButtonClick"
-        android:text="btn_pagIndicator"/>
+        android:text="titleIndicatorActivity"/>
 
     <Button
         android:id="@+id/btn_IconIndicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onButtonClick"
-        android:text="btn_IconIndicator"/>
+        android:text="IconIndicatorActivity"/>
 
 </LinearLayout>

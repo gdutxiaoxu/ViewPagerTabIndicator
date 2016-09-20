@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".IconActivity">
         </activity>
+        <activity android:name=".ToolBarActivity">
+        </activity>
     </application>
 
 </manifest>
