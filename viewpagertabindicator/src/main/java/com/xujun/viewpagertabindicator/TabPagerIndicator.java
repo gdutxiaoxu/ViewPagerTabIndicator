@@ -1,4 +1,4 @@
-/*
+package com.xujun.viewpagertabindicator;/*
  * Copyright (C) 2013 Andreas Stuetz <andreas.stuetz@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,12 +14,11 @@
  * limitations under the License.
  */
 
-package com.xujun.funapp.widget;
+
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.databinding.tool.util.L;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
@@ -41,10 +40,10 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.orhanobut.logger.Logger;
-import com.xujun.funapp.R;
+import com.xujun.viewpagertabindicator.R;
 
 import java.util.Locale;
+
 
 public class TabPagerIndicator extends HorizontalScrollView {
 
@@ -496,8 +495,8 @@ public class TabPagerIndicator extends HorizontalScrollView {
 
             lastPosition=currentPosition;
             currentPosition = position;
-            Logger.i("lastPosition="+lastPosition);
-            Logger.i("currentPosition="+currentPosition);
+//            Logger.i("lastPosition="+lastPosition);
+//            Logger.i("currentPosition="+currentPosition);
 
         }
 
